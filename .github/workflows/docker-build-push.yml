@@ -36,7 +36,7 @@ jobs:
           pull: true
           file: ./docker/containers/tactical/dockerfile
           platforms: linux/amd64
-          tags: stephenc01/tactical:${{ steps.prep.outputs.version }},stephenc01/tactical:latest
+          tags: stephenc01/tactical:docker-v2,stephenc01/tactical:latest
           #tags: tacticalrmm/tactical:${{ steps.prep.outputs.version }},tacticalrmm/tactical:latest
           
       - name: Build and Push Tactical MeshCentral Image
@@ -47,7 +47,7 @@ jobs:
           pull: true
           file: ./docker/containers/tactical-meshcentral/dockerfile
           platforms: linux/amd64
-          tags: stephenc01/tactical-meshcentral:${{ steps.prep.outputs.version }},stephenc01/tactical-meshcentral:latest
+          tags: stephenc01/tactical-meshcentral:docker-v2,stephenc01/tactical-meshcentral:latest
           #tags: tacticalrmm/tactical-meshcentral:${{ steps.prep.outputs.version }},tacticalrmm/tactical-meshcentral:latest
           
       - name: Build and Push Tactical NATS Image
@@ -58,7 +58,7 @@ jobs:
           pull: true
           file: ./docker/containers/tactical-nats/dockerfile
           platforms: linux/amd64
-          tags: stephenc01/tactical-nats:${{ steps.prep.outputs.version }},stephenc01/tactical-nats:latest
+          tags: stephenc01/tactical-nats:$docker-v2,stephenc01/tactical-nats:latest
           #tags: tacticalrmm/tactical-nats:${{ steps.prep.outputs.version }},tacticalrmm/tactical-nats:latest
           
       - name: Build and Push Tactical Frontend Image
@@ -69,7 +69,7 @@ jobs:
           pull: true
           file: ./docker/containers/tactical-frontend/dockerfile
           platforms: linux/amd64
-          tags: stephenc01/tactical-frontend:${{ steps.prep.outputs.version }},stephenc01/tactical-frontend:latest
+          tags: stephenc01/tactical-frontend:docker-v2,stephenc01/tactical-frontend:latest
           #tags: tacticalrmm/tactical-frontend:${{ steps.prep.outputs.version }},tacticalrmm/tactical-frontend:latest
           
       - name: Build and Push Tactical Nginx Image
@@ -80,5 +80,5 @@ jobs:
           pull: true
           file: ./docker/containers/tactical-nginx/dockerfile
           platforms: linux/amd64
-          tags: stephenc01/tactical-nginx:${{ steps.prep.outputs.version }},stephenc01/tactical-nginx:latest
+          tags: stephenc01/tactical-nginx:docker-v2,stephenc01/tactical-nginx:latest
           #tags: tacticalrmm/tactical-nginx:${{ steps.prep.outputs.version }},tacticalrmm/tactical-nginx:latest
