@@ -58,7 +58,7 @@ jobs:
           pull: true
           file: ./docker/containers/tactical-nats/dockerfile
           platforms: linux/amd64
-          tags: stephenc01/tactical-nats:$docker-v2,stephenc01/tactical-nats:latest
+          tags: stephenc01/tactical-nats:docker-v2,stephenc01/tactical-nats:latest
           #tags: tacticalrmm/tactical-nats:${{ steps.prep.outputs.version }},tacticalrmm/tactical-nats:latest
           
       - name: Build and Push Tactical Frontend Image
