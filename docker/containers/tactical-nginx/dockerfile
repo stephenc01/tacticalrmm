@@ -11,8 +11,11 @@ RUN deluser --remove-home nginx \
   && adduser -S -G nginx -u 1000 nginx
 
 RUN apk add --no-cache openssl bash
-
 RUN chown -R nginx:nginx /etc/nginx
+
+
+RUN mkdir -p /opt/tactical/certs/
+RUN chown -R nginx:nginx /opt/tactical/certs/
 
 SHELL ["/bin/bash", "-e", "-o", "pipefail", "-c"]
 
