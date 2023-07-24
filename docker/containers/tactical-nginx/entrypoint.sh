@@ -17,7 +17,7 @@ set -e
 : "${CERT_PUB_PATH:=${TACTICAL_DIR}/certs/fullchain.pem}"
 
 #make certificate directory
-mkdir -p /opt/tactical/certs/
+#mkdir -p /opt/tactical/certs/
 
 # remove default config
 rm -f /etc/nginx/conf.d/default.conf
